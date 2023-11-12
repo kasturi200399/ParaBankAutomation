@@ -1,0 +1,22 @@
+package assignment1;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ParaBankAutomation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Load chromeDriver
+		System.setProperty("WebDriver.chrome.driver","E:\\selenium\\chromedriver-win32-118-final\\chromedriver.exe");
+		//Opening the Chrome Browser
+		WebDriver driver=new ChromeDriver();  // Create an object of the Webdriver
+		driver.manage().window().maximize();
+			
+		driver.get("https://in.bookmyshow.com/explore/home/"); //Open the website
+		
+
+	}
+
+}

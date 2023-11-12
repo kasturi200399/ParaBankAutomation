@@ -1,0 +1,42 @@
+package assignment1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ParaBankAutomation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Load chromeDriver
+		System.setProperty("WebDriver.chrome.driver","D:\\ParaBank Assignment\\ParaBank Ass1\\chromedriver.exe");
+		//Opening the Chrome Browser
+		WebDriver driver=new ChromeDriver();  // Create an object of the Webdriver
+		driver.manage().window().maximize();
+			
+		driver.get("https://parabank.parasoft.com/parabank/index.htm"); //Open the website
+		
+		//Finding xath for Register link
+		
+		WebElement registerlink=driver.findElement(By.xpath("//a[text()='Register']"));
+		
+		registerlink.click();   // Click on Register link
+		
+		// Fill the Signup/Registration Form
+		
+		//First Name
+		WebElement Fname=driver.findElement(By.xpath("//input[@id='customer.firstName']"));
+		Fname.sendKeys("Kasturi");     // input first name
+		// Last Name
+		WebElement Lname=driver.findElement(By.xpath("//input[@id='customer.lastName']"));
+		Lname.sendKeys("Aher");      // Input the Last Name
+		
+		//
+		
+		
+
+	}
+
+}
